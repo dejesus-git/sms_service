@@ -1,0 +1,19 @@
+<div class="inner-container">
+	<%= render "partials/sidebar" %>
+	<div id="twilio_settings">
+		<div class="grey_border">
+			<h4>Update your account</h4>
+		</div>	
+		<div class="settings_forms settings_blocks">
+			<%= form_for(@user,  html: { id: "api_form"}, remote: true) do |u| %>
+				<%= u.text_field :twilio_api, value: nil, placeholder: "Api number or SID" %>
+				<%= u.text_field :twilio_secret, value: nil, placeholder: "Api secret key" %>
+				<%= u.submit "change api credentials"%>
+			<% end %>
+			<%= form_for(@user, html: { id: "balance_form" }, remote: true) do |u| %>
+				<%= u.number_field :balance, value: nil, placeholder: "add money" %>
+				<%= u.submit "add to balance"%>
+			<% end %>
+		</div>
+	</div>
+</div>

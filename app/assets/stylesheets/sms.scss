@@ -1,0 +1,51 @@
+// Place all the styles related to the sms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/********************************
+	style - actioncable responses
+*********************************/ 
+
+.action_message {
+  width: 87.5%;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px auto;
+}
+
+.success, .failure {
+	color: #fff;
+}
+.success {
+	background: green;
+	background: #00C9FF;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.failure {
+	background: #EB3349;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, #F45C43, #EB3349);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.remove_message {
+	float: right;
+}
+
+/************************
+MEDIA QUERIES
+*************************/
+
+@media ( min-width: 768px) {
+	.action_message {
+		width: 57.5%;
+	}
+}
+
+@media ( min-width: 1024px) {
+	.action_message {
+		width: 47.5%;
+	}
+}

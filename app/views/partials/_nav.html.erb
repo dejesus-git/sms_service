@@ -1,0 +1,13 @@
+<% if current_user != nil %>
+	<nav id="nav">
+		<div class="container">
+			<div id="brand_div">
+				<a href="/dashboard"><h1 id="brand_h1">SMSPRO</h1></a>
+			</div>	
+			<ul id="nav_list">
+				<li><p id="balance">balance: <%= current_user.balance %></p></li>
+				<li id="avatar_li"><div class="avatar_div"><p id="avatar_letter"><%= current_user.username[0]%></p></div></li>
+			</ul>
+		</div>
+	</nav>
+<% end %>

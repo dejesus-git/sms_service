@@ -1,0 +1,15 @@
+	<div id="inner_cont" class="inner_container">
+	<%= render "partials/sidebar" %>
+	<!-- post -->
+	<div id="post">
+		<div class="post_header"><i class="ion-ios-compose-outline"></i><h5>Create Message</h5></div>
+		<%= form_tag("/send_message",id: "submitMessage", remote: true) do  %>	
+			<%= text_field_tag :body %>
+			<%= text_field_tag :phones %>
+			<div class="post_submit_div">
+				<%= submit_tag "Send SMS", class: "submit_button" %>
+			</div>
+		<% end %>
+	</div>
+
+</div>
